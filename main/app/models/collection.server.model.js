@@ -11,7 +11,7 @@ var mongoose = require('mongoose'),
  */
 var CollectionSchema = new Schema({
 	// Collection model fields   
-	// ...
+	
 	name:{
 		type: String,
 		default: " ",
@@ -27,8 +27,7 @@ var CollectionSchema = new Schema({
 	},
 	//for store images
 	images: {
-		data: Buffer,
-		contentType: String,
+		type:Array,
 	},
 	created:{
 		type: Date,

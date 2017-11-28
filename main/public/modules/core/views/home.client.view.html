@@ -34,4 +34,13 @@
 	
 	<br>Enjoy,
 	<br>Iris Zhou.
+	
+<div id="collection_display">
+	<input type ="text" placeholder="search..." data-ng-model="keyword" id="keyword">
+	<button data-ng-click="search()" >search</button>
+	<br><br>
+	<div>
+	<img ng-repeat="imgurl in imgurls" ng-src={{ imgurl }} height=240px width=240px></img>
+	</div>
+</div>
 </section>
