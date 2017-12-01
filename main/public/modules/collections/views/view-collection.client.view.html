@@ -1,10 +1,17 @@
 <section data-ng-controller="CollectionsController" data-ng-init="findOne()">
 	<div class="page-header">
 		<h1 data-ng-bind="collection.name"></h1>
+		<h3>Description:</h3>
 		<p data-ng-bind="collection.description"></p>
-		<img ng-src="collection.images.">hh</img>
+		<h3>rating:</h3>
+		<p data-ng-bind="collection.rating"></p>
+		<button data-ng-click = "showImage()">showImage</button><br>
+		<img ng-repeat = "imageUrl in imageUrls" ng-src="{{ imageUrl }}" height=240px width=240px hspace="10" vspace="10"></img>
 	</div>
 	<div class="pull-right">
+		<a class="btn btn-primary" data-ng-click="addTo();">
+			<i class="glyphicon glyphicon-plus"></i>
+		</a>
 		<a class="btn btn-primary" href="/#!/collections/{{collection._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>
 		</a>
@@ -13,3 +20,4 @@
 		</a>
 	</div>
 </section>
+

@@ -14,6 +14,7 @@ module.exports = function(app) {
 	  .get(collections.read)
 	  .delete(users.requiresLogin,collections.delete)
 	  .put(users.requiresLogin,collections.update);
+	  //.post(users.requiresLogin, collections.save);
 	  
 	  app.param('collectionId',collections.collectionByID);
 };

@@ -5,6 +5,10 @@ angular.module('collections').config(['$stateProvider',
 	function($stateProvider) {
 		// Collections state routing
 		$stateProvider.
+		state('add-collection', {
+			url: '/collections/add',
+			templateUrl: 'modules/collections/views/add-collection.client.view.html'
+		}).
 		state('create-collection', {
 			url: '/collections/create',
 			templateUrl: 'modules/collections/views/create-collection.client.view.html'

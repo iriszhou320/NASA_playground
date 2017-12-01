@@ -10,6 +10,9 @@ angular.module('collections').factory('Collections', ['$resource',
 			},
 			remove: {
 				method: 'DELETE'
+			},
+			save:{
+				method: 'POST'
 			}
 		});
 	}

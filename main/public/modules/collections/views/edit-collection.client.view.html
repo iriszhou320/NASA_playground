@@ -15,7 +15,19 @@
                 <div class="form-group">
                     <label class="control-label" for="description">Description</label>
                     <div class="controls">
-                        <textarea name="description" data-ng-model="collection.description" id="description" class="form-control" cols="30" rows="10" placeholder="Description" required></textarea>
+                        <textarea name="description" data-ng-model="collection.description" id="description" class="form-control" cols="30" rows="5" placeholder="Description" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="visibility">Visibility</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="collection.visibility" id="visibility" class="form-control" placeholder="public or private" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="rating">Rating</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="collection.rating" id="rating" class="form-control" placeholder="Rate with number 1 to 10" required></textarea>
                     </div>
                 </div>
                 <div class="form-group">

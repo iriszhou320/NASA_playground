@@ -27,11 +27,17 @@ var CollectionSchema = new Schema({
 	},
 	//for store images
 	images: {
-		type:Array,
+		type:[String],
+		default:" ",
 	},
 	created:{
+		//can not be an array
 		type: Date,
 		default: Date.now
+	},
+	rating:{
+		type: Number,
+		default:0,
 	}
 });
 
