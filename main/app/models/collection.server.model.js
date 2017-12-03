@@ -27,8 +27,7 @@ var CollectionSchema = new Schema({
 	},
 	//for store images
 	images: {
-		type:[String],
-		default:" ",
+		type:[String]
 	},
 	created:{
 		//can not be an array

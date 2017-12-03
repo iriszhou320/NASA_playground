@@ -8,6 +8,7 @@ module.exports = function(app) {
 	app.route('/collections')
 	  .get(collections.list)
 	  .post(users.requiresLogin, collections.create);
+   
 	  
  	// the collectionId param is added to the params object for the request
 	  app.route('/collections/:collectionId')

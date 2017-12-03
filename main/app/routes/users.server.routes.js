@@ -8,6 +8,8 @@ var passport = require('passport');
 module.exports = function(app) {
 	// User Routes
 	var users = require('../../app/controllers/users.server.controller');
+	
+
 
 	// Setting up the users profile api
 	app.route('/users/me').get(users.me);
@@ -51,6 +53,7 @@ module.exports = function(app) {
 	// Setting the github oauth routes
 	app.route('/auth/github').get(passport.authenticate('github'));
 	app.route('/auth/github/callback').get(users.oauthCallback('github'));
+
 
 	// Finish by binding the user middleware
 	app.param('userId', users.userByID);

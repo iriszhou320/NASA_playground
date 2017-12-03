@@ -1,12 +1,17 @@
 'use strict';
 
 // Collections controller
-angular.module('collections').controller('CollectionsController', ['$scope','$rootScope','$http', '$stateParams', '$location', 'Authentication', 'Collections',
-	function($scope, $rootScope, $http, $stateParams, $location, Authentication, Collections) {
+angular.module('collections').controller('CollectionsController', ['$scope','$window','$rootScope','$http', '$stateParams', '$location', 'Authentication', 'Collections',
+	function($scope, $window,$rootScope, $http, $stateParams, $location, Authentication, Collections) {
 		$scope.authentication = Authentication;
 		   //global variable to pass the image urls
            var x = "hey"; 
            
+           //functions to show full image
+           $scope.showFull = function(){
+           	console.log(this.imageUrl);
+           	window.location=this.imageUrl;
+           }
            
            //add routing
             $scope.add = function(){

@@ -6,7 +6,10 @@
 		<h3>rating:</h3>
 		<p data-ng-bind="collection.rating"></p>
 		<button data-ng-click = "showImage()">showImage</button><br>
-		<img ng-repeat = "imageUrl in imageUrls" ng-src="{{ imageUrl }}" height=240px width=240px hspace="10" vspace="10"></img>
+		<!--<a href = >-->
+		<img ng-repeat = "imageUrl in imageUrls" ng-src="{{ imageUrl }}" height=240px width=240px hspace="10" vspace="10" 
+		data-ng-click = "showFull()"></img>
+		<!--</a>-->
 	</div>
 	<div class="pull-right">
 		<a class="btn btn-primary" data-ng-click="addTo();">
